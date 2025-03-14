@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>vertex.glsl</file>
+        <file>fragment.glsl</file>
+        <file>sphere_sdf.glsl</file>
+        <file>mandelbulb_sdf.glsl</file>
+        <file>cube_sdf.glsl</file>
+        <file>mandelbox_sdf.glsl</file>
+    </qresource>
+</RCC>
