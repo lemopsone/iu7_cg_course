@@ -1,0 +1,17 @@
+.DS_Store
+.qmake.stash
+*.user
+build/
+*.o
+measure_build/
+.latexmkrc
+*.aux
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.bat
+
