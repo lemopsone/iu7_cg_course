@@ -1,0 +1,101 @@
+%% Creator: Inkscape 1.4 (e7c3feb1, 2024-10-09), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'phong_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{272.35588074bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,1.02248212)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{phong_svg-tex.pdf}}%
+    \put(0.20211918,0.90980322){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Начало\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{phong_svg-tex.pdf}}%
+    \put(0.20602402,0.02198153){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Конец\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{phong_svg-tex.pdf}}%
+    \put(0.58023331,0.99755862){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Алгоритм закраски по Фонгу\end{tabular}}}}%
+    \put(0.58023331,0.97809938){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Вход: point - координаты точки сцены,\end{tabular}}}}%
+    \put(0.58023331,0.95864029){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}         normal - нормаль к поверхности в \end{tabular}}}}%
+    \put(0.58023331,0.93918119){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}	данной точке,\end{tabular}}}}%
+    \put(0.58023331,0.91972209){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}         cameraPos - позиция камеры,\end{tabular}}}}%
+    \put(0.58023331,0.90026299){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}         objColor - цвет закрашиваемого объекта,\end{tabular}}}}%
+    \put(0.58023331,0.88080389){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}         intensity - интенсивность источника света,\end{tabular}}}}%
+    \put(0.58023331,0.86134479){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}         lightColor - цвет источника света,\end{tabular}}}}%
+    \put(0.58023331,0.84188569){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}         lightDir - направление света от источника.\end{tabular}}}}%
+    \put(0.58023331,0.82242646){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Выход: color - цвет пикселя.\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{phong_svg-tex.pdf}}%
+    \put(0.09547733,0.81736134){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Инициализация коэффициентов:\end{tabular}}}}%
+    \put(0.14001456,0.79790225){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ambientStrength = 0.1\end{tabular}}}}%
+    \put(0.14509316,0.77844302){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}diffuseStrength = 0.7\end{tabular}}}}%
+    \put(0.13899401,0.75898391){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}specularStrength = 0.2\end{tabular}}}}%
+    \put(0.16409651,0.73952481){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}shininess = 32.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{phong_svg-tex.pdf}}%
+    \put(0.09266974,0.68366141){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Вычисление направления взгляда\end{tabular}}}}%
+    \put(0.07105253,0.66420232){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}viewDir = normalize(cameraPos - point)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{phong_svg-tex.pdf}}%
+    \put(0.11495254,0.60724485){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Расчёт фонового освещения\end{tabular}}}}%
+    \put(0.07140749,0.58778576){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ambient = ambientStrength * lightColor\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{phong_svg-tex.pdf}}%
+    \put(0.10393217,0.52747768){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Расчёт диффузного освещения\end{tabular}}}}%
+    \put(0.08279907,0.50801844){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}diff = max(0.0, dot(normal, lightDir))\end{tabular}}}}%
+    \put(0.06404988,0.48855933){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}diffues = diff * diffuseStrength * objColor\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{phong_svg-tex.pdf}}%
+    \put(0.08014073,0.41654765){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Вычисление направления отражения\end{tabular}}}}%
+    \put(0.00818153,0.39708857){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}reflectDir = 2 * dot(normal, lightDir) * normal - lightDir\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{phong_svg-tex.pdf}}%
+    \put(0.0813751,0.32989612){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Вычисление зеркального освещения\end{tabular}}}}%
+    \put(0.02183999,0.31043688){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}spec = max(0.0, dot(viewDir, reflectDir)) ^ shininess\end{tabular}}}}%
+    \put(0.04726922,0.29097776){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}specular = spec * specularStrength * objColor\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{phong_svg-tex.pdf}}%
+    \put(0.08528378,0.22378515){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Получение результирующего цвета\end{tabular}}}}%
+    \put(0.08204867,0.20432603){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}color = ambient + diffuse + specular\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{phong_svg-tex.pdf}}%
+    \put(0.18410016,0.12593559){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}return color\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{phong_svg-tex.pdf}}%
+  \end{picture}%
+\endgroup%

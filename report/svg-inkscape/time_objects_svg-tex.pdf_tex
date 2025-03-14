@@ -1,0 +1,95 @@
+%% Creator: Inkscape 1.4 (e7c3feb1, 2024-10-09), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'time_objects_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{576bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.66666667)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{time_objects_svg-tex.pdf}}%
+    \put(0.18979167,0.11653646){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}100\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{time_objects_svg-tex.pdf}}%
+    \put(0.18979167,0.16369792){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}150\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{time_objects_svg-tex.pdf}}%
+    \put(0.18979167,0.21085937){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}200\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{time_objects_svg-tex.pdf}}%
+    \put(0.18979167,0.25802083){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}250\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{time_objects_svg-tex.pdf}}%
+    \put(0.18979167,0.30518229){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}300\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{time_objects_svg-tex.pdf}}%
+    \put(0.18979167,0.35235677){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}350\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{time_objects_svg-tex.pdf}}%
+    \put(0.18979167,0.39951823){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}400\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{time_objects_svg-tex.pdf}}%
+    \put(0.18979167,0.44667969){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}450\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{time_objects_svg-tex.pdf}}%
+    \put(0.18979167,0.49384115){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}500\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{time_objects_svg-tex.pdf}}%
+    \put(0.18979167,0.5410026){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}550\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{time_objects_svg-tex.pdf}}%
+    \put(0.20802083,0.07747396){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{time_objects_svg-tex.pdf}}%
+    \put(0.3453776,0.07747396){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{time_objects_svg-tex.pdf}}%
+    \put(0.4827474,0.07747396){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}10\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{time_objects_svg-tex.pdf}}%
+    \put(0.62010417,0.07747396){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}15\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{time_objects_svg-tex.pdf}}%
+    \put(0.75747396,0.07747396){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}20\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{time_objects_svg-tex.pdf}}%
+    \put(0.89483073,0.07747396){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}25\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{time_objects_svg-tex.pdf}}%
+    \put(0.09213542,0.33722656){\rotatebox{90}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Время, мс\end{tabular}}}}}%
+    \put(0.55141927,0.01888021){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Количество объектов\end{tabular}}}}%
+    \put(0.74769531,0.5019401){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}Время\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{time_objects_svg-tex.pdf}}%
+    \put(0.55141927,0.59959635){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Время отрисовки изображения\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

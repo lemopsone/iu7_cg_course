@@ -1,0 +1,130 @@
+%% Creator: Inkscape 1.4 (e7c3feb1, 2024-10-09), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'classes_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{501.73544312bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.40423324)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{classes_svg-tex.pdf}}%
+    \put(0.34225752,0.24533028){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{\textit{RenderingAlgorithm}}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{classes_svg-tex.pdf}}%
+    \put(0.33322638,0.22713559){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}- shader\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{classes_svg-tex.pdf}}%
+    \put(0.33322638,0.20909859){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}+render()\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{classes_svg-tex.pdf}}%
+    \put(0.21874597,0.14120867){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{RayMarching}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{classes_svg-tex.pdf}}%
+    \put(0.19121927,0.12301396){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}+render()\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{classes_svg-tex.pdf}}%
+    \put(0.33279976,0.14120867){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{ConcurrentRayMarching}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{classes_svg-tex.pdf}}%
+    \put(0.33322638,0.12301396){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}+render()\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{classes_svg-tex.pdf}}%
+    \put(0.49260511,0.14120867){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{OpenGLRenderer}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{classes_svg-tex.pdf}}%
+    \put(0.47523349,0.12301396){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}+render()\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{classes_svg-tex.pdf}}%
+    \put(0.66083502,0.14120867){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{\textit{ShadingAlgorithm}}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{classes_svg-tex.pdf}}%
+    \put(0.64618196,0.12301396){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}+shade()\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{classes_svg-tex.pdf}}%
+    \put(0.67029036,0.02311855){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{PhongShading}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{classes_svg-tex.pdf}}%
+    \put(0.64618196,0.00492384){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}+shade()\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{classes_svg-tex.pdf}}%
+    \put(0.81404993,0.02311855){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{GouraudShading}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{classes_svg-tex.pdf}}%
+    \put(0.79566313,0.00492384){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}+shade()\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{classes_svg-tex.pdf}}%
+    \put(0.51976536,0.02311855){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{SimpleShading}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{classes_svg-tex.pdf}}%
+    \put(0.49670074,0.00492384){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}+shade()\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{classes_svg-tex.pdf}}%
+    \put(0.42743154,0.39072882){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Scene}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{classes_svg-tex.pdf}}%
+    \put(0.40804301,0.3725342){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}- objects\end{tabular}}}}%
+    \put(0.40804301,0.36197126){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}- camera\end{tabular}}}}%
+    \put(0.40804301,0.35140833){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}- light\end{tabular}}}}%
+    \put(0.40804301,0.34084531){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}- renderer\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{classes_svg-tex.pdf}}%
+    \put(0.40804301,0.32280831){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}+update()\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{classes_svg-tex.pdf}}%
+    \put(0.06738618,0.24533028){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{\textit{Camera}}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{classes_svg-tex.pdf}}%
+    \put(0.05269211,0.22713559){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}+move()\end{tabular}}}}%
+    \put(0.05269211,0.21657265){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}+rotate()\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{classes_svg-tex.pdf}}%
+    \put(0.0081136,0.14702572){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{FreeCamera}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=24]{classes_svg-tex.pdf}}%
+    \put(0.00411073,0.12883099){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}+move()\end{tabular}}}}%
+    \put(0.00411073,0.11826809){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}+rotate()\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=25]{classes_svg-tex.pdf}}%
+    \put(0.09888112,0.14702572){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{SphereCamera}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=26]{classes_svg-tex.pdf}}%
+    \put(0.10127349,0.12883099){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}+move()\end{tabular}}}}%
+    \put(0.10127349,0.11826809){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}+rotate()\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=27]{classes_svg-tex.pdf}}%
+    \put(0.19185615,0.24533028){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{LightSource}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=28]{classes_svg-tex.pdf}}%
+    \put(0.87837382,0.24533028){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{\textit{SceneObject}}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=29]{classes_svg-tex.pdf}}%
+    \put(0.87522252,0.22713559){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}+ SDF()\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=30]{classes_svg-tex.pdf}}%
+    \put(0.83836908,0.14120867){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Sphere}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=31]{classes_svg-tex.pdf}}%
+    \put(0.82182233,0.12301396){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}+ SDF()\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=32]{classes_svg-tex.pdf}}%
+    \put(0.93294585,0.14120867){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Mandelbulb}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=33]{classes_svg-tex.pdf}}%
+    \put(0.92862272,0.12301396){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}+ SDF()\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=34]{classes_svg-tex.pdf}}%
+  \end{picture}%
+\endgroup%

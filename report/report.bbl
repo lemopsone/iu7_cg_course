@@ -1,0 +1,85 @@
+\begin{thebibliography}{10}
+\def\selectlanguageifdefined#1{
+\expandafter\ifx\csname date#1\endcsname\relax
+\else\language\csname l@#1\endcsname\fi}
+\ifx\undefined\url\def\url#1{{\small #1}}\else\fi
+\ifx\undefined\BibUrl\def\BibUrl#1{\url{#1}}\else\fi
+\ifx\undefined\BibAnnote\long\def\BibAnnote#1{(#1)}\else\fi
+\ifx\undefined\BibEmph\def\BibEmph#1{\emph{#1}}\else\fi
+
+\bibitem{mandelbrot}
+\selectlanguageifdefined{english}
+Mandelbrot~B.~B. The Fractal Geometry of Nature.
+\newblock --- San Francisco, 1982.
+\newblock --- P.~462.
+
+\bibitem{morozov}
+\selectlanguageifdefined{russian}
+Морозов~А.~Д. Введение в теорию фракталов.
+\newblock --- М. Ижевск: Институт компьютерных исследований, 2006.
+\newblock {--- C.}~162.
+
+\bibitem{algebra_mandelbulb}
+\selectlanguageifdefined{english}
+Boily~V., D.~R. On the algebraic foundation of the Mandelbulb~// Fractals.
+\newblock 2023.
+\newblock no.~31.
+
+\bibitem{rendering}
+\selectlanguageifdefined{russian}
+Процесс получения изображения по трехмерной модели в реальном времени~/ Д.А.~Зенкевич, Д.В.~Гончаров, Свиридова~И.В. {[и~др.]}~// Экономика и социум.
+\newblock 2020.
+\newblock {№}~5.
+
+\bibitem{rt_rendering}
+\selectlanguageifdefined{english}
+Akenine-Moller~T., Haines~E., Hoffman~N. Real-Time Rendering.
+\newblock 3 edition.
+\newblock --- New York: CRC Press, 2008.
+\newblock --- P.~1045.
+
+\bibitem{sdf}
+\selectlanguageifdefined{russian}
+Круглов~М.~А., Холкин~А.~В. Метод построения трехмерной графики на основе полей расстояний~// Инженерный вестник Дона.
+\newblock 2024.
+\newblock {№}~7.
+
+\bibitem{rogers}
+\selectlanguageifdefined{russian}
+Д.~Роджерс. Алгоритмические основы машинной графики.
+\newblock --- Москва: Издательство Мир, 1989.
+\newblock {--- C.}~512.
+
+\bibitem{phong}
+\selectlanguageifdefined{english}
+Phong~B.~T. Illumination of Computer-Generated Images~// Communications of the ACM.
+\newblock 1975.  June.
+\newblock Vol.~18.
+\newblock --- P.~313 -- 317.
+
+\bibitem{cpp}
+\selectlanguageifdefined{russian}
+Документация по C++ [Электронный ресурс].
+\newblock --- Режим доступа: \url{https://learn.microsoft.com/ru-ru/cpp/} (дата обращения: 22.11.2024).
+
+\bibitem{qt}
+\selectlanguageifdefined{russian}
+Документация по Qt [Электронный ресурс].
+\newblock --- Режим доступа: \url{https://doc.qt.io/} (дата обращения: 22.11.2024).
+
+\bibitem{opengl}
+\selectlanguageifdefined{russian}
+Документация по OpenGL [Электронный ресурс].
+\newblock --- Режим доступа: \url{https://registry.khronos.org/OpenGL-Refpages/gl4/} (дата обращения: 01.12.2024).
+
+\bibitem{macos}
+\selectlanguageifdefined{russian}
+MacOS Sequoia Developer Documentation [Электронный ресурс].
+\newblock --- Режим доступа: \url{https://developer.apple.com/documentation/} (дата обращения: 25.11.2024).
+
+\bibitem{macbook}
+\selectlanguageifdefined{russian}
+MacBook Pro (14 дюймов, 2021 г.) - Спецификации [Электронный ресурс].
+\newblock --- Режим доступа: \url{https://support.apple.com/ru-ru/111902} (дата обращения: 24.11.2024).
+
+\end{thebibliography}

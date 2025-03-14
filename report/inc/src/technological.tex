@@ -1,0 +1,226 @@
+\section{Технологическая часть}
+
+В данном разделе представлены средства разработки программы, детали её реализации
+и описание пользовательского интерфейса.
+
+\subsection{Средства реализации}
+
+В качестве основного языка программирования выбран C++~\cite{cpp}.
+Выбор языка обусловлен следующими факторами:
+
+\begin{itemize}
+  \item поддержка объектно-ориентированной парадигмы;
+  \item высокая производительность;
+  \item наличие строгой типизации;
+\end{itemize}
+
+Для реализации графического интерфейса (GUI) программы был использован фреймворк Qt~\cite{qt}.
+Он предоставляет возможность создавать кроссплатформенные динамические интерфейсы, и содержит
+широкий набор инструментов для работы с трехмерными объектами,
+полезных в рамках данной задачи, таких, как собственные реализации
+трехмерных векторов и матриц.
+
+Для оптимизации работы алгоритма марширования лучей была дополнительно реализована
+версия алгоритма, использующая графический процессор для вычислений. Для взаимодействия
+с графическим процессором была использована библиотека OpenGL~\cite{opengl}. Её выбор обусловлен
+кроссплатформенностью и богатым набором функций для работы с графическим процессором.
+
+\subsection{Проектирование программы}
+
+Программа спроектирована с использованием объектно-ориентиро-\\ванного подхода. Компонентами
+системы являются классы, отвечающие за отрисовку и закраску объектов, изменение параметров сцены.
+
+Основные классы разработанной программы:
+\begin{itemize}
+  \item Camera --- абстрактный класс, определяющий базовое поведение камеры;
+  \item FreeCamera --- камера, способная свободно перемещаться в пространстве;
+  \item SphereCamera --- камера, двигающаяся по сферической траектории вокруг объекта сцены;
+  \item LightSource --- класс, описывающий источник света;
+  \item SceneObject --- абстрактный класс, определяющий базовый набор параметров объекта сцены, в том числе наличие SDF;
+  \item Sphere --- объект-сфера;
+  \item Mandelbulb --- фрактал <<оболочка Мандельброта>>;
+  \item RenderingAlgorithm --- абстрактный класс, реализующий паттерн <<Стратегия>> для алгоритма рендеринга;
+  \item RayMarching --- алгоритм марширования лучей (однопоточный);
+  \item ConcurrentRayMarching --- алгоритм марширования лучей (многопоточный);
+  \item OpenGLRenderer --- алгоритм марширования лучей (графический процессор, OpenGL);
+  \item ShadingAlgorithm --- абстрактный класс, реализующий паттерн <<Стратегия>> для алгоритма закраски;
+  \item SimpleShading --- простая модель закраски;
+  \item PhongShading --- модель закраски по Фонгу;
+  \item GouraudShading --- модель закраски по Гуро;
+  \item Scene --- класс, представляющий сцену. Содержит камеру, источник света, объекты сцены, а также класс, определяющий стратегию рендеринга.
+\end{itemize}
+
+Диаграмма разработанных классов приведена на рисунке~(\ref{img:classes_png}).
+
+\png{120mm}{classes_png}{Диаграмма разработанных классов}
+
+\clearpage
+\subsection{Реализация алгоритмов}
+
+В листинге~\ref{lst:mandelbulb_sdf} представлена функция SDF для оболочки Мандельброта.
+Она вычисляет расстояние от точки до поверхности фрактала.
+
+\begin{lstlisting}[label=lst:mandelbulb_sdf,caption=Функция SDF для оболочки Мандельброта]
+qreal Mandelbulb::SDF(const QVector3D &point) {
+    QVector3D z = (point - m_pos);
+    qreal dr = 1.0;
+    qreal r = 0.0;
+    for (int i = 0; i < m_iters; ++i) {
+        r = z.length();
+        if (r > m_rad) break;
+        qreal theta = std::atan2(z.y(), z.x());
+        qreal phi = std::acos(z.z() / r);
+        dr = std::pow(r, m_power - 1.0) * m_power * dr + 1.0;
+        qreal zr = std::pow(r, m_power);
+        theta *= m_power;
+        phi *= m_power;
+        z = zr * QVector3D(std::sin(phi) * std::cos(theta),
+                           std::sin(phi) * std::sin(theta),
+                           std::cos(phi))
+            + (point - m_pos);
+    }
+    return 0.5 * std::log(r) * r / dr;
+}
+\end{lstlisting}
+
+\clearpage
+
+В листинге~\ref{lst:raymarch} представлена реализация алгоритма марширования лучей.
+
+\begin{lstlisting}[label=lst:raymarch,caption=Алгоритм марширования лучей]
+QColor RayMarching::castRay(const QVector3D &origin, const QVector3D &direction, const QColor &bgColor, Camera *cam, QList<SceneObject *> *objects, LightSource *lightSource)
+{
+    qreal totalDist = 0.0f;
+    qreal k = cam->getRadius() / cam->DEFAULT_RADIUS;
+    qreal adjustedEPS = qMax(0.0001f, EPS * k);
+    int adjustedSteps = MAX_STEPS + static_cast<int>(k / 50);
+    qreal adjustedMaxDist = MAX_DIST * k;
+
+    for (qsizetype step = 0; step < adjustedSteps; ++step)
+    {
+        QVector3D point = origin + direction * totalDist;
+        qreal minDist = adjustedMaxDist;
+        SceneObject *closestObj = nullptr;
+
+        for (SceneObject *obj : *objects) {
+            qreal dist = obj->SDF(point);
+            if (dist < minDist) { minDist = dist; closestObj = obj; }
+        }
+
+        if (minDist < adjustedEPS) {
+            if (closestObj) {
+                QVector3D normal = this->normal(point, closestObj);
+                return m_shading->shade(cam, normal, closestObj->getColor(), direction, lightSource);
+            }
+        }
+        if (totalDist > adjustedMaxDist) break;
+        totalDist += std::min(minDist * 0.8, (double)adjustedMaxDist);
+    }
+    return bgColor;
+}
+\end{lstlisting}
+
+\clearpage
+
+В листинге~\ref{lst:phong} представлена реализация алгоритма закраски по Фонгу.
+
+\begin{lstlisting}[label=lst:phong,caption=Алгоритм закраски по Фонгу]
+QColor PhongShading::shade(Camera *cam,
+                           const QVector3D &normal,
+                           const QColor &baseColor,
+                           const QVector3D &hitPoint,
+                           LightSource *lightSource)
+{
+    QVector3D cameraPos = cam->getPos();
+    QVector3D ambientLight(0.1f, 0.1f, 0.1f);
+    qreal ambientStrength = 0.1f;
+    QVector3D lightDir = lightSource->getDirection(hitPoint);
+    QVector3D viewDir = (cameraPos - hitPoint).normalized();
+    qreal diffuseStrength = 0.7f;
+    qreal specularStrength = 0.2f;
+    qreal shininess = 32.0f;
+    QVector3D ambient = ambientStrength * ambientLight;
+    qreal diff = std::max(0.0f, QVector3D::dotProduct(normal, lightDir));
+    QVector3D diffuse = diff * diffuseStrength * QVector3D(baseColor.redF(), baseColor.greenF(), baseColor.blueF());
+    QVector3D reflectDir = 2 * QVector3D::dotProduct(normal, lightDir) * normal - lightDir;
+    qreal spec = std::pow(std::max(0.0f, QVector3D::dotProduct(viewDir, reflectDir)), shininess);
+    QVector3D specular = spec * specularStrength * QVector3D(1.0f, 1.0f, 1.0f);
+    QVector3D result = (ambient + diffuse + specular) * lightSource->getIntensity();
+    QColor color;
+    color.setRedF(std::min(result.x(), 1.0f));
+    color.setGreenF(std::min(result.y(), 1.0f));
+    color.setBlueF(std::min(result.z(), 1.0f));
+
+    return color;
+}
+\end{lstlisting}
+
+\subsection{Пользовательский интерфейс}
+
+На рисунке~\ref{img:ui} представлен интерфейс программы, включающий в себя элементы
+для взаимодействия пользователя с симуляцией. С их помощью пользователь может управлять параметрами сцены,
+редактировать параметры активных объектов и менять используемые методы рендеринга и закраски.
+
+\png{100mm}{ui}{Пользовательский интерфейс}
+
+\subsubsection{Взаимодействие с элементами интерфейса}
+
+Функции базовых элементов интерфейса.
+\begin{itemize}
+  \item кнопки <<цвет объекта>> и <<цвет фона>> --- при нажатии открывают диалоговое окно с выбором нового цвета;
+  \item меню <<выбор объекта>> --- позволяет выбрать моделируемый объект из выпадающего списка;
+  \item меню <<выбор модели рендера>> --- позволяет выбрать алгоритм рендеринга из выпадающего списка;
+  \item меню <<выбор модели закраски>> --- позволяет выбрать алгоритм закраски из выпадающего списка;
+  \item <<интенсивность>> --- отвечает за интенсивность источника света, число с плавающей точкой от 0 до 1;
+  \item кнопка <<совместить с позицией камеры>> --- позволяет совместить источник света с камерой;
+  \item поля <<x>>, <<y>>, <<z>>> --- отвечают за положение источника света в пространстве сцены.
+\end{itemize}
+
+При включенном режиме совмещения источника света с позицией камеры, поля, отвечающие за ручное изменение положения источника
+являются неактивными и их значения недоступны к редактированию.
+Также, в зависимости от выбранного объекта, пользователю предоставляется возможность изменять его индивидуальные характеристики.
+
+Для фрактала <<оболочка Мандельброта>>:
+
+\begin{itemize}
+  \item <<степень>> --- степень используемая в итерации фрактала, число с плавающей точкой от 3 до 30, влияет на форму фрактала;
+  \item <<радиус отсечения>> --- радиус отсечения, используемый при построении фрактала, число с плавающей точкой от 1 до 5, влияет на количество <<артефактов>>;
+  \item <<количество итераций>> --- количество итераций, используемых в функции SDF для уточнения границ фрактала, число от 1 до 1000, влияет на детализацию фрактала.
+\end{itemize}
+
+Для сферы:
+
+\begin{itemize}
+  \item <<радиус>> --- радиус сферы.
+\end{itemize}
+
+\subsubsection{Управление камерой}
+
+В программе реализовано два вида управления камерой: свободное перемещение камеры по пространству сцены и режим вращения камеры вокруг объекта.
+Переключение между режимами осуществляется с помощью меню <<режим камеры>>.
+
+В режиме свободного перемещения пользователю доступны следующие операции:
+
+\begin{itemize}
+  \item перетаскивание мышью --- позволяет поворачивать камеру вокруг своей оси;
+  \item клавиши W, A, S, D --- позволяют перемещать камеру вперёд, влево, назад или вправо относительно текущего направления взгляда.
+\end{itemize}
+
+В режиме вращения вокруг объекта:
+
+\begin{itemize}
+  \item перетаскивание мышью --- позволяет вращать камеру вокруг центра сцены, меняя ракурс;
+  \item колесико мыши --- позволяет приближать и отдалять камеру;
+\end{itemize}
+
+\subsection{Демонстрация работы программы}
+
+На рисунке~\ref{img:demo} представлены результаты работы программы, где отображен процесс моделирования фрактальной структуры
+в трехмерном пространстве. Для построения фрактала используется итерация $z \mapsto z^{12}$, рендеринг осуществляется с помощью
+алгоритма марширования лучей с использованием графического процессора, закраска осуществляется по модели Фонга.
+
+\png{120mm}{demo}{Демонстрация работы программы}
+
+\subsection*{Вывод}
+В данном разделе была описана технология разработки структуры программы, приведены примеры реализации
+используемых алгоритмов и работы реализованной программы.

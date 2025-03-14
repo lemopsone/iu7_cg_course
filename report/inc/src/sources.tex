@@ -1,0 +1,11 @@
+\addcontentsline{toc}{section}{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+\renewcommand{\refname}{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ} % переименовать страницу списка литературы
+
+\begingroup
+\bibliographystyle{inc/src/utf8gost705u}  % стилевой файл для оформления по ГОСТу
+\makeatletter
+\renewcommand{\@biblabel}[1]{#1. \hfill}
+\makeatother
+\raggedright
+\bibliography{inc/src/sources.bib}          % имя библиографической базы (bib-файла)
+\endgroup

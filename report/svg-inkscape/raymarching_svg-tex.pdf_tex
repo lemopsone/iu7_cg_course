@@ -1,0 +1,114 @@
+%% Creator: Inkscape 1.4 (e7c3feb1, 2024-10-09), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'raymarching_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{317.90018463bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,1.34583392)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{raymarching_svg-tex.pdf}}%
+    \put(0.18007527,1.26400871){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Начало\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{raymarching_svg-tex.pdf}}%
+    \put(0.1158472,1.18977125){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Инициализация totalDist \end{tabular}}}}%
+    \put(0.16124743,1.17309998){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}значением 0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{raymarching_svg-tex.pdf}}%
+    \put(0.16975244,1.01140725){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Цикл по i \end{tabular}}}}%
+    \put(0.13836937,0.99473599){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}от 0 до MAX_STEPS\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{raymarching_svg-tex.pdf}}%
+    \put(0.14022516,0.86163487){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Цикл для каждого\end{tabular}}}}%
+    \put(0.09043251,0.84496351){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}объекта object в массиве objects\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{raymarching_svg-tex.pdf}}%
+    \put(0.11839766,0.93652101){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Инициализация minDist \end{tabular}}}}%
+    \put(0.1311466,0.91984973){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}значением MAX_DIST\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{raymarching_svg-tex.pdf}}%
+    \put(0.08003373,0.78674865){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Вычисление расстояния до объекта\end{tabular}}}}%
+    \put(0.12364034,0.77007736){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}dist = sdf(object, point)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{raymarching_svg-tex.pdf}}%
+    \put(0.11461345,0.71041844){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Объект ближе остальных:\end{tabular}}}}%
+    \put(0.15281163,0.69374715){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}dist < minDist?\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{raymarching_svg-tex.pdf}}%
+    \put(0.21612255,0.6371156){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Устанавливаем минимальное расстояние\end{tabular}}}}%
+    \put(0.21375529,0.62044431){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}равынм расстоянию до текущего объекта\end{tabular}}}}%
+    \put(0.31189601,0.60377306){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}minDist = dist\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{raymarching_svg-tex.pdf}}%
+    \put(0.09137598,0.41881019){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Находимся на границе объекта:\end{tabular}}}}%
+    \put(0.15400731,0.4021389){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}minDist < EPS?\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{raymarching_svg-tex.pdf}}%
+    \put(0.2548045,0.32182324){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Находим цвет точки по Фонгу\end{tabular}}}}%
+    \put(0.25988817,0.30515195){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}color := phongShading(point)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{raymarching_svg-tex.pdf}}%
+    \put(0.12562399,0.51487052){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Конец цикла по object\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{raymarching_svg-tex.pdf}}%
+    \put(0.17652947,0.19467776){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}i = i + 1\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{raymarching_svg-tex.pdf}}%
+    \put(0.16463778,0.10140548){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}return сolor\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{raymarching_svg-tex.pdf}}%
+    \put(0.18342055,0.01883239){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Конец\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{raymarching_svg-tex.pdf}}%
+    \put(0.12778397,1.11022565){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Инициализация color \end{tabular}}}}%
+    \put(0.1596094,1.09355426){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}цветом фона\end{tabular}}}}%
+    \put(0.15053758,1.07688299){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}color = bgColor\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{raymarching_svg-tex.pdf}}%
+    \put(0.40955866,1.32448111){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Алгоритм марширования лучей\end{tabular}}}}%
+    \put(0.40955866,1.30780983){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Вход: point - координаты (x, y) пикселя, для которого выполняется процедура,\end{tabular}}}}%
+    \put(0.40955866,1.29113856){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}          objects - массив объектов сцены,\end{tabular}}}}%
+    \put(0.40955866,1.27446718){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}          bgColor - цвет заднего фона, \end{tabular}}}}%
+    \put(0.40955866,1.25779591){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}          MAX_STEPS - максимально допустимое количество итераций \end{tabular}}}}%
+    \put(0.40955866,1.24112464){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}	для нахождения пересечения с объектами сцены,\end{tabular}}}}%
+    \put(0.40955866,1.22445336){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}          MAX_DIST - максимально допустимое расстояние до \end{tabular}}}}%
+    \put(0.40955866,1.20778209){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}	близжайшего объекта сцены\end{tabular}}}}%
+    \put(0.40955866,1.19111082){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Выход: color - цвет, соответствующий данному пикселю на изображении\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{raymarching_svg-tex.pdf}}%
+    \put(0.34588685,0.7185468){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}да\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{raymarching_svg-tex.pdf}}%
+    \put(0.35173043,0.42311833){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}да\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{raymarching_svg-tex.pdf}}%
+  \end{picture}%
+\endgroup%
